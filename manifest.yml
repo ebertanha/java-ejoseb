@@ -1,0 +1,13 @@
+applications:
+- path: target/JavaCloudantApp.war
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: java-ejoseb
+  host: java-ejoseb
+  disk_quota: 1024M
+  services:
+  - availability-monitoring-auto
+  - java-ejoseb-cloudantNoSQLDB
+  env:
+    BLUEMIX_APP_MGMT_ENABLE: noproxy jmx debug
